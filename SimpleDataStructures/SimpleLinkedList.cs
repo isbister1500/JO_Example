@@ -71,15 +71,16 @@ namespace SimpleDataStructures
         /// </summary>
         public void Delete(int index)
         {
-            SimpleNode nodeToDelete = GetNodeAtIndex(index);
             if (index == 0) //Delete Head Node
             {
+                SimpleNode nodeToDelete = GetNodeAtIndex(index);
                 this.First = nodeToDelete.NextNode;
             }
 
             else //Delete Body Node
             {
                 SimpleNode nodeBeforeDelete = GetNodeAtIndex(--index);
+                SimpleNode nodeToDelete = nodeBeforeDelete.NextNode;
                 nodeBeforeDelete.NextNode = nodeToDelete.NextNode;
             }
 
