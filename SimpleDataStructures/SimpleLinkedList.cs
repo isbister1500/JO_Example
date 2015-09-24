@@ -13,8 +13,8 @@ namespace SimpleDataStructures
     /// </summary>
     public class SimpleLinkedList : IPrintable
     {
-        public SimpleNode First { get; set; }
-        public int Count { get; set; }
+        public SimpleNode First { get; private set; }
+        public int Count { get; private set; }
 
         /// <summary>
         /// Initialize list.
